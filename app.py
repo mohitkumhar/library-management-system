@@ -151,17 +151,67 @@ blank_space = Label(root, text="", bg='grey')
 blank_space.pack()
 
 
+# Search The Books By Book Number 
 
-title1 = Label(root, text="Search for a Book Name: ", bg='#A9A9A9', font=('arial',20))
-title1.pack(anchor=NW, padx=20)
+search_book_student = Frame(root, bg='grey')
+search_book_student.pack()
+
+title1 = Label(search_book_student, text="Search for a Book Name: ", bg='grey', font=('arial',17))
+title1.grid(row=0, column=0)
+
+search1 = Entry(search_book_student, width=30, font=20)
+search1.grid(row=0, column=1)
 
 
-search1 = Entry(root, width=30, font=20)
-search1.pack(anchor=NW, padx=20)
+search_button = Button(search_book_student, command=search_book, text='Search', height=1, width=10, fg='black', bg='white', activebackground='black', activeforeground='white', highlightcolor='red', relief=RIDGE, underline=True, background='#A9A9A9', font=('arial', 10, 'bold'))
+# search_button.pack(anchor=NW, padx=120, pady=30)
+search_button.grid(row=0, column=3)
 
 
-search_button = Button(root, command=search_book, text='Search', height=2, width=10, fg='black', bg='white', activebackground='black', activeforeground='white', highlightcolor='red', relief=RIDGE, underline=True, background='#A9A9A9', font=('arial', 10, 'bold'))
-search_button.pack(anchor=NW, padx=120, pady=30)
+
+blank_space = Label(root, text="", bg='grey')
+blank_space.pack()
+
+
+# Search Books By Author Name
+
+search_book_student = Frame(root, bg='grey')
+search_book_student.pack()
+
+title1 = Label(search_book_student, text="Search Books By Author Name: ", bg='grey', font=('arial',17))
+# title1.pack(anchor=NW, padx=20)
+title1.grid(row=0, column=0)
+
+search1 = Entry(search_book_student, width=30, font=20)
+search1.grid(row=0, column=1)
+
+
+search_button = Button(search_book_student, command=search_book, text='Search', height=1, width=10, fg='black', bg='white', activebackground='black', activeforeground='white', highlightcolor='red', relief=RIDGE, underline=True, background='#A9A9A9', font=('arial', 10, 'bold'))
+# search_button.pack(anchor=NW, padx=120, pady=30)
+search_button.grid(row=0, column=3)
+
+
+
+blank_space = Label(root, text="", bg='grey')
+blank_space.pack()
+
+
+# Search Book By Publish Year
+
+search_book_student = Frame(root, bg='grey')
+search_book_student.pack()
+
+title1 = Label(search_book_student, text="Search Book By Publish Year: ", bg='grey', font=('arial',17))
+# title1.pack(anchor=NW, padx=20)
+title1.grid(row=0, column=0)
+
+search1 = Entry(search_book_student, width=30, font=20)
+search1.grid(row=0, column=1)
+
+
+search_button = Button(search_book_student, command=search_book, text='Search', height=1, width=10, fg='black', bg='white', activebackground='black', activeforeground='white', highlightcolor='red', relief=RIDGE, underline=True, background='#A9A9A9', font=('arial', 10, 'bold'))
+# search_button.pack(anchor=NW, padx=120, pady=30)
+search_button.grid(row=0, column=3)
 
 
 blank_space = Label(root, text="", bg='grey')
