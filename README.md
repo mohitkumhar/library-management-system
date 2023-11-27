@@ -13,3 +13,5 @@
 <li>Easily manage and retrieve book information.
 <li>Admin can Easily add a book data in Database by user Friendly Interference.
   
+![Screenshot (35)](https://github.com/mohitkumhar/library-management-system/assets/107917553/144cf96c-b627-4f28-b4d9-3b2a2b8200b3)
+![Screenshot (36)](https://github.com/mohitkumhar/library-management-system/assets/107917553/db347bbe-2200-4d5a-82a2-bbfc6df821c1)
