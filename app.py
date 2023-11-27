@@ -36,20 +36,25 @@ def login():
 def show_admin_dashboard():
     
     def post_book():
-        book_name = write_book_name.get()
-        author = write_author_name.get()
-        publish_year = write_publish_year.get()
-        isbm_number = write_isbm_number.get()
 
-        book_data = {
-            "book_name": book_name,
-            "author": author,
-            "publication_year": publish_year,
-            "ISBM": isbm_number,
-        }
+            book_name = write_book_name.get()
+            author = write_author_name.get()
+            publish_year = write_publish_year.get()
+            isbm_number = write_isbm_number.get()
 
-        collection.insert_one(book_data)
-        messagebox.showinfo("SUCCESS", f"The Book {book_name}, of {author}, on {publish_year}, of {isbm_number} is successfully Uploaded")
+            if book_name and author and publish_year and isbm_number:    
+                book_data = {
+                    "book_name": book_name,
+                    "author": author,
+                    "publication_year": publish_year,
+                    "ISBM": isbm_number,
+                }
+
+                collection.insert_one(book_data)
+                messagebox.showinfo("SUCCESS", f"The Book {book_name}, of {author}, on {publish_year}, of {isbm_number} is successfully Uploaded")
+
+            else:
+                messagebox.showerror('Sorry..!!', 'Book Details are Not Completely Filled')
 
     def logout():
         root.deiconify()
@@ -59,6 +64,7 @@ def show_admin_dashboard():
     root.withdraw()
     admin_dashboard = tk.Toplevel(root)
     admin_dashboard.geometry('500x500')
+    admin_dashboard.minsize(400, 450)
     admin_dashboard.config(bg='grey')
     admin_dashboard.title("Admin Dashboard")
     admin_dashboard.iconbitmap('library.ico')
@@ -129,17 +135,9 @@ def show_admin_dashboard():
 
 
 
-
-
-
-
-
-
-
-
-
 root=Tk()
 root.geometry('500x500')
+root.minsize(400, 450)
 root.title('Library Management System')
 root.config(background='grey')
 root.iconbitmap('library.ico')
