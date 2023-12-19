@@ -1,7 +1,7 @@
 # Python Library Management System
 
 <b>→</b> This simple Python library management system allows students to search for books by title, author, and publish year. <br>
-<b>→</b> Utilizing a user-friendly interface, users can easily access information about available books within the system.
+<b>→</b> Utilizing a user-friendly interface, users can easily access information about available books within the system.<br>
 <b>→</b> This Project Use MongoDB as a BackEnd Database and store all the Books Data in MongoDB.
 <br>
 <br>
